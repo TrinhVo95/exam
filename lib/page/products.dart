@@ -164,24 +164,14 @@ class _ProductsPageState extends State<ProductsPage> {
                                       textAlign: TextAlign.center,
                                     ),
                                     SizedBox(height: 8),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          '\$${product.price.toStringAsFixed(2)}',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.add_circle,
-                                          size: 20,
-                                          color: Colors.orange,
-                                        ),
-                                      ],
+                                    Text(
+                                      '\$${product.price.toStringAsFixed(2)}',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
+                                    
                                   ],
                                 ),
                               ),
