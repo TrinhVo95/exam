@@ -34,5 +34,22 @@ void addProduct(Products product) {
     notifyListeners();
   }
 
+  void increaseQuantity(Products product) {
+    final index = _products.indexWhere((item) => item.product.id == product.id);
+    if (index >= 0) {
+      _products[index].quantity++;
+    }
+    notifyListeners();
+  }
   
+  void decreaseQuantity(Products product) {
+    final index = _products.indexWhere((item) => item.product.id == product.id);
+    if (index >= 0) {
+      _products[index].quantity--;
+      if (_products[index].quantity <= 0) {
+        _products.removeAt(index);
+      }
+    }
+    notifyListeners();
+  }
 }
